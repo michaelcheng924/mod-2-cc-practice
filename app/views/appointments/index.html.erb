@@ -1,0 +1,6 @@
+<h1>All Appointments at Clinic: </h1>
+
+
+<%@appointments.each do |appointment|%>
+  <ul> <%=link_to appointment.description, appointment%> </ul>
+<%end%>

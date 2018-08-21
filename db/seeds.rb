@@ -9,4 +9,4 @@ patient3 = Patient.create(name: 'Jimmy')
 patient4 = Patient.create(name: 'George')
 
 appointment1 = Appointment.create(doctor_id: doctor1.id, patient_id: patient1.id, description: 'Physical exam')
-appointment1 = Appointment.create(doctor_id: doctor2.id, patient_id: patient2.id, description: 'Common cold')
+appointment2 = Appointment.create(doctor_id: doctor2.id, patient_id: patient2.id, description: 'Common cold')
