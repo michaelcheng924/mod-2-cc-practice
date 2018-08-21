@@ -1,0 +1,7 @@
+<h1>Please fill out this form to make an appointment:</h1>
+<%= form_with model: @appointment do |form| %>
+  <%= form.select :patient_id, Patient.all.collect { |p| [p.name, p.id]}%>
+  <%= form.select :doctor_id, Doctor.all.collect { |p| [p.name, p.id]}%>
+  <%= form.text_field :description, placeholder: "Description" %>
+  <%= form.submit %>
+<% end %>
