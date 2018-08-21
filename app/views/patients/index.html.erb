@@ -1,0 +1,5 @@
+<h1>Patients at Clinic:</h1>
+
+<%@patients.each do |patient|%>
+  <ul> <%=link_to patient.name, patient%> </ul>
+<%end%>

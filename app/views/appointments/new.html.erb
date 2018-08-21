@@ -1,0 +1,8 @@
+<h1>New Appointment: </h1>
+<p>Please select doctor, patient, and give brief description: </p>
+<%=form_with model: @appointment do |form| %>
+Select Doctor: <%=form.select :doctor_id, @doctor_options%>
+Select Patient: <%=form.select :patient_id, @patient_options%>
+Descirpion: <%=form.text_field :description%>
+<%=form.submit%>
+<%end%>

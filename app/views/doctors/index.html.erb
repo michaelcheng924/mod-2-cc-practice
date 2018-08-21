@@ -1,0 +1,5 @@
+<h1>Doctors at Clinic:</h1>
+<%=button_to 'New Doctor', new_doctor_path, method: 'get'%>
+<%@doctors.each do |doctor|%>
+  <ul> <%=link_to doctor.name, doctor%> </ul>
+<%end%>
