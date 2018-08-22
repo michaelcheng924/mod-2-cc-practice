@@ -1,0 +1,9 @@
+<h1>New Appointment</h1>
+
+  <%= form_with model: Appointment.new do |form| %>
+    <p>Select Patient: <%= form.select :patient_id, Patient.all.map { |patient| [patient.name, patient.id] } %></p>
+    <p>Select Doctor: <%= form.select :doctor_id, Doctor.all.map { |doctor| [doctor.name, doctor.id] } %></p>
+    <%= form.text_field :description, placeholder: "Description" %>
+    <%= form.submit %>
+  <% end %>
+
