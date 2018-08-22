@@ -1,0 +1,7 @@
+<h1>Create an Appointment</h1>
+  <%= form_with model: @appointment do |f| %>
+  <p><%= f.select :doctor_id, Doctor.all.map { |doctor| [ doctor.name, doctor.id ] }%></p>
+  <p><%= f.select :patient_id, Patient.all.map { |patient| [ patient.name, patient.id ] }%></p>
+  <p><%= f.text_field :description, placeholder: "Description" %></p>
+  <%= f.submit %>
+<% end %>
