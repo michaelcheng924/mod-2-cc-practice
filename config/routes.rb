@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
-  resources :patients, only: [:index]
-  resources :appointments, only: [:index]
+  get 'appointments/new'
+  get 'appointments/index'
+  get 'appointments/show'
+  get 'appointments/edit'
+  get 'appointments/create'
+  resources :patients
+  resources :appointments
+  resources :doctors
 end
