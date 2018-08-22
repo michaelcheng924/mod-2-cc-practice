@@ -1,3 +1,8 @@
+
+Appointment.destroy_all
+Doctor.destroy_all
+Patient.destroy_all
+
 doctor1 = Doctor.create(name: 'Billy')
 doctor2 = Doctor.create(name: 'Sally')
 doctor3 = Doctor.create(name: 'Tommy')
