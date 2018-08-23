@@ -1,0 +1,8 @@
+<h1>Appointments</h1>
+
+<%= form_with model: Appointment.new do |form| %>
+  Doctor: <%= form.collection_select(:doctor_id, Doctor.all, :id, :name) %><br>
+  Patient: <%= form.collection_select(:patient_id, Patient.all, :id, :name) %><br>
+  Description: <%= form.text_field :description %>
+  <%= form.submit %>
+<% end %>
