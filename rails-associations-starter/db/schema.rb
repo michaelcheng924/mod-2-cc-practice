@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 2018_09_24_145148) do
 
   create_table "pet_rocks", force: :cascade do |t|
     t.string "name"
+    t.integer "koala_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["koala_id"], name: "index_pet_rocks_on_koala_id"
   end
 
 end

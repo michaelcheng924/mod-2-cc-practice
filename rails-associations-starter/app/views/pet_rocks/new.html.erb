@@ -1,0 +1,5 @@
+<%= form_with model: PetRock.new do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.collection_select :koala_id, Koala.all, :id, :name %>
+  <%= f.submit %>
+<% end %>
